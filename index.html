@@ -1,0 +1,41 @@
+<!-- Lovepreet Singh 7/11/2021 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <title>Sorting Visualiser</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2 style="text-align: center;">Sorting Visualiser</h2>
+    <div id="flex">
+        <div class="slidecontainer">
+            <label for="myRange">Size</label><br>
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange"><br>
+            <label for="speed">Speed</label><br>
+            <input type="range" min="1" max="10" value="5" class="slider" id="speed"><br>
+            <button id="createArray">Create Array</button>
+            <button id="bubble">Bubble Sort</button>
+            <button id="merge">Merge Sort</button>
+            <button id="selection">Selection Sort</button>
+        </div>
+        <div id="info">
+            <br>
+            <strong>
+                1. Set the size of array.<br>
+                2. Click Create Array to generate new array.<br>
+                3. Click the algorithm button to visualise it.<br>
+                4. You can change the speed of algorithm while running.<br>
+                5. Don't click multiple buttons while one algorithm is running.<br>
+            </strong>
+        </div>
+    </div>
+    <div id="array"></div>
+    <script src="index.js"></script>
+</body>
+
+</html>

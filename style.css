@@ -1,0 +1,100 @@
+/* Lovepreet Singh 7/11/2021 */
+
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+body{
+    /* background-image: url('https://source.unsplash.com/random'); */
+    /* background-color: #BF55EC; */
+    background-image: url('bg3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+h2{
+    color:black;
+    font-size: 34px;
+    
+}
+.block {
+    width: 25px;
+    background-color: dodgerblue;
+    position: absolute;
+    bottom: 0px;
+    transition: 0.2s all ease;
+}
+
+#array {
+    background-color: transparent;
+    height: 425px;
+    width: fit-content;
+    margin-left: 15px;
+    position: relative;
+    margin-top: 64px;
+    
+   
+    
+}
+
+.label{
+    position: absolute;
+    color: black;
+    margin-top: -20px;
+    width: 100%;
+    text-align: center;
+    font-size: 11px;
+}
+
+button{
+  background-color: black;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 14px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:hover {
+  box-shadow: rgba(44, 187, 99, 0.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+  color: black;
+  background-color: white;
+}
+
+.slidecontainer{
+    margin-top: 15px;
+    color: black;
+    font-weight: bolder;
+    margin-left: 15px;
+}
+
+#info{
+    margin-right: 15px;
+}
+#flex{
+    width:100%;
+    display: inline-flex;
+    justify-content: space-between;
+    
+}
+
+@media screen and (max-width: 480px) {
+    .block{
+        width: 10px;
+    }
+    .label{
+        font-size: 5px;
+    }
+  }
