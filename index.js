@@ -10,16 +10,17 @@ let dist = 30//distance in blocks
 let speed = 5//to control speed using delay function
 let arr = []
 let conid = document.getElementById('array')
-
+let flag = true;
 // slider input for array size
 slider = document.getElementById('myRange')
 slider.oninput = function () {
     size = this.value
-
+    dist = 30
     // to change distance b/w blocks if size of array is high
     if (size > 50) {
-        dist = 13.25
+        dist = 15
     }
+
 }
 
 // slider input for algo speed
@@ -33,6 +34,7 @@ function createArray() {
 
     // clear the element if already generated
     conid.innerHTML = ""
+
     arr = []
 
     for (let i = 0; i < size; i++) {
@@ -54,7 +56,7 @@ function createArray() {
         //to change width if size>50 to fit in screen
         if (size > 50) {
             let m = document.querySelectorAll('.block')
-            m[i].style.width = "9px"
+            m[i].style.width = "10px"
         }
         arr.push(x)
     }
@@ -63,6 +65,7 @@ function createArray() {
 async function bubbleSort() {
 
     //taking all blocks
+    flag = false;
     let bl = document.querySelectorAll(".block")
 
     for (let i = 0; i < arr.length - 1; i++) {
@@ -90,14 +93,17 @@ async function bubbleSort() {
         bl[bl.length - i - 1].style.backgroundColor = 'palevioletred'
     }
     bl[0].style.backgroundColor = 'palevioletred'
+    flag = true;
 }
 
 
 //event listener to call createArray fn
 let generate = document.getElementById('createArray')
 generate.addEventListener('click', () => {
+    if (flag === true) {
+        createArray()
+    }
 
-    createArray()
 })
 
 //event listener to call bubbleSort fn
@@ -105,9 +111,12 @@ let start = document.getElementById('bubble')
 start.addEventListener("click", () => {
 
     // display info about bubble sort
-    let el = document.getElementById('info')
-    el.innerHTML = "<center><strong>Bubble Sort</strong></center><strong>Worst complexity:</strong> n^2 <br><strong>Average complexity:</strong> n^2<br><strong>Best complexity:</strong> n<br><strong> Space complexity:</strong> 1"
-    bubbleSort()
+    if (flag === true) {
+        let el = document.getElementById('info')
+        el.innerHTML = "<center><strong>Bubble Sort</strong></center><strong>Worst complexity:</strong> O(n^2) <br><strong>Average complexity:</strong> O(n^2)<br><strong>Best complexity:</strong> O(n)<br><strong> Space complexity:</strong> O(1)"
+        bubbleSort()
+    }
+
 
 })
 
@@ -115,6 +124,7 @@ start.addEventListener("click", () => {
 
 //MERGE SORT
 async function merge(l, mid, r) {
+
     console.log(l, r)
     let bl = document.querySelectorAll(".block")
     let left = [], right = []
@@ -152,7 +162,7 @@ async function merge(l, mid, r) {
             k++
         }
         bl = document.querySelectorAll(".block")
-       
+
 
     }
     while (i < left.length) {
@@ -174,9 +184,10 @@ async function merge(l, mid, r) {
         k++
         bl = document.querySelectorAll(".block")
     }
-  
+
 }
 async function mergeSort(l, r) {
+    flag = false;
     if (l >= r) {
         return
     }
@@ -185,21 +196,24 @@ async function mergeSort(l, r) {
     await mergeSort(mid + 1, r)
     await merge(l, mid, r)
     await pause(speed * 100)
-
+    flag = true;
 }
 
 //event listener to call mergeSort fn
 let mergeEl = document.getElementById("merge")
 mergeEl.addEventListener('click', () => {
-    let el = document.getElementById('info')
-    el.innerHTML = "<center><strong>Merge Sort</strong></center><strong>Worst complexity:</strong> n*log(n) <br><strong>Average complexity:</strong> n*log(n)<br><strong>Best complexity:</strong> n*log(n)<br><strong> Space complexity:</strong> n"
-    mergeSort(0, arr.length - 1)
-    console.log(arr)
+    if (flag === true) {
+        let el = document.getElementById('info')
+        el.innerHTML = "<center><strong>Merge Sort</strong></center><strong>Worst complexity:</strong> O(n*log(n)) <br><strong>Average complexity:</strong> O(n*log(n))<br><strong>Best complexity:</strong> O(n*log(n))<br><strong> Space complexity:</strong> O(n)"
+        mergeSort(0, arr.length - 1)
+        console.log(arr)
+    }
 })
 
 
 //Selection Sort
 async function selectionSort() {
+    flag = false;
     let bl = document.querySelectorAll('.block')
     for (let i = 0; i < arr.length - 1; i++) {
         let min = i;
@@ -233,15 +247,17 @@ async function selectionSort() {
         bl[i].style.backgroundColor = 'palevioletred'
     }
     bl[arr.length - 1].style.backgroundColor = 'palevioletred'
+    flag = true;
 
 }
 
 //event listener to call selectionSort fn
 let selectionEl = document.getElementById('selection')
 selectionEl.addEventListener('click', async () => {
+    if (flag === true) {
+        let el = document.getElementById('info')
+        el.innerHTML = "<center><strong>Selection Sort</strong></center><strong>Worst complexity:</strong> O(n^2) <br><strong>Average complexity:</strong> O(n^2)<br><strong>Best complexity:</strong> O(n^2)<br><strong> Space complexity:</strong> O(1)"
+        selectionSort()
+    }
 
-    let el = document.getElementById('info')
-    el.innerHTML = "<center><strong>Selection Sort</strong></center><strong>Worst complexity:</strong> n^2 <br><strong>Average complexity:</strong> n^2<br><strong>Best complexity:</strong> n^2<br><strong> Space complexity:</strong> 1"
-    selectionSort()
-    
 })
