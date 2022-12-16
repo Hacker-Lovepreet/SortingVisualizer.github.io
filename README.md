@@ -23,7 +23,9 @@ Link: https://hacker-lovepreet.github.io/SortingVisualizer.github.io/
 ## **5. Demonstration**
 
 
-https://user-images.githubusercontent.com/82011012/208142509-1c68e9da-4e82-4595-92b4-1c2452d53a70.mp4
+
+https://user-images.githubusercontent.com/82011012/208142661-52b2e1bf-e586-4e3c-8e63-e01749091cfd.mp4
+
 
 
 
