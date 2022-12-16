@@ -8,8 +8,8 @@
 
 body {
     /* background-image: url('https://source.unsplash.com/random'); */
-    /* background-color: #BF55EC; */
-    background-image: url('bg3.jpg');
+    background-color: lightgoldenrodyellow;
+/*     background-image: url('bg3.jpg'); */
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Roboto Condensed', sans-serif;
