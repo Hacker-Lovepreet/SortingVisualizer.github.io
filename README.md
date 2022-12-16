@@ -11,10 +11,20 @@ A web based service for visualizing various sorting algorithms(eg. Merge Sort, B
 3. Speed of the simulation can be set as per the user.
 
 
-## **4. Live link**
+## **3. Live link**
 Link: https://hacker-lovepreet.github.io/SortingVisualizer.github.io/
 
 
-## **5. Screenshot of the Interface**
+## **4. Screenshot of the Interface**
 ![image](https://user-images.githubusercontent.com/82011012/208125251-8974a4af-908f-4275-b187-465d9d10fd10.png)
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/82011012/208127478-dd5587c0-b170-4d42-a02b-022e2d3f1a2e.gif)
+
+
+
+## **5. Demonstration**
+
+
+https://user-images.githubusercontent.com/82011012/208142509-1c68e9da-4e82-4595-92b4-1c2452d53a70.mp4
+
+
+
+
